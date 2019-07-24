@@ -30,19 +30,30 @@ a:hover {
     border-radius: 500rem;
     width: 15%;
     height: 15%;
-    flex-basis: 200px;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
     margin: 15px
 }
 
 .outer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .main-content, .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .about-me, .projects-code, .projects-film, .work-code, .work-film, .writing {
@@ -107,36 +118,57 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px 0; }
 
 .projects {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .project-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
 }
 
 .projectContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
     padding: 10px;
 }
 
 .projectCell {
-    flex-basis: 300px;
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
     margin: 15px;
 }
 
 .projectContent:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .projectContentImage {
     width: 200px;
-    align-self: center;
-    flex-basis: 250px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
 }
 
 .icon-envelope:before {
