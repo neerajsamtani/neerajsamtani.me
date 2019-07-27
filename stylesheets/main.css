@@ -56,13 +56,17 @@ a:hover {
             justify-content: center;
 }
 
+.footer {
+    padding-top: 10px;
+    padding: 0px 20px;
+    text-align: center;
+}
+
 .about-me, .projects-code, .projects-film, .work-code, .work-film, .writing {
     height: 100%;
     width: 80%;
     padding-top: 20px;
 }
-
-/*--------------------------------------------------------*/
 
 @font-face {
   font-family: 'icomoon';
@@ -137,6 +141,14 @@ h1, h2, h3, h4, h5, h6 {
     transition: .2s ease-in-out;
 }
 
+.descriptive-project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: .2s ease-in-out;
+    flex-flow: column;
+}
+
 .projectContent {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -152,9 +164,36 @@ h1, h2, h3, h4, h5, h6 {
 
 .projectCell {
     -ms-flex-preferred-size: 300px;
-        flex-basis: 300px;
+    flex-basis: 300px;
     margin: 15px;
 }
+
+.descriptive-projectCell {
+    -ms-flex-preferred-size: 300px;
+    flex-basis: 300px;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.descriptive-projectContentImage{
+    margin-right: 50px;
+}
+
+.right {
+    flex: 1 1 500px;
+    align-self: center;
+    justify-content: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+/*col-xs-12 col-sm-6 col-md-4  */
 
 .projectContent:hover {
   -webkit-transform: scale(1.05);
