@@ -177,6 +177,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 15px;
 }
 
+/*
 .descriptive-projectCell {
     -ms-flex-preferred-size: 300px;
     flex-basis: 300px;
@@ -190,6 +191,7 @@ h1, h2, h3, h4, h5, h6 {
         -ms-flex-pack: center;
             justify-content: center;
 }
+*/
 
 .descriptive-projectContentImage{
     margin-right: 50px;
@@ -220,7 +222,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*col-xs-12 col-sm-6 col-md-4  */
-
 .projectContent:hover {
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
@@ -232,8 +233,32 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    -ms-flex-preferred-size: 250px;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+}
+
+/* Add extra line above Subnav when Navbar wraps */
+@media screen and (min-width: 455px) {
+    .extra-hr {
+        display: none;
+    }
+}
+
+/* Adjust Work-Code Layout when screen size is small */
+@media screen and (min-width: 980px) {
+    .descriptive-projectCell {
+        -ms-flex-preferred-size: 250px;
         flex-basis: 250px;
+        margin: 15px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
 }
 
 .icon-envelope:before {
