@@ -26,7 +26,6 @@ a:hover {
 }
 
 .profile-image{
-    border-radius: 500rem;
     width: 15%;
     height: 15%;
     -ms-flex-preferred-size: 200px;
@@ -279,6 +278,14 @@ h1, h2, h3, h4, h5, h6 {
                 justify-content: center;
     }
 }
+
+/* Hide footer on Safari since it causes bugs */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+    .footer, .non-safari-hr {
+        display: none;
+    }
+}}
 
 .icon-envelope:before {
   content: "\e902";
