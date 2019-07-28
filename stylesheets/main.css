@@ -53,6 +53,8 @@ a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    flex-direction: column;
+    align-content: center;
 }
 
 .footer {
@@ -65,6 +67,7 @@ a:hover {
     height: 100%;
     width: 80%;
     padding-top: 20px;
+    align-self: center;
 }
 
 @font-face {
@@ -175,6 +178,13 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-preferred-size: 300px;
     flex-basis: 300px;
     margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectCellTitle, .description {
+    align-self: center;
+    text-align: center;
 }
 
 /*
@@ -192,10 +202,6 @@ h1, h2, h3, h4, h5, h6 {
             justify-content: center;
 }
 */
-
-.descriptive-projectContentImage{
-    margin-right: 50px;
-}
 
 .right {
     -webkit-box-flex: 1;
