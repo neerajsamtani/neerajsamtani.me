@@ -53,8 +53,12 @@ a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    flex-direction: column;
-    align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 
 .footer {
@@ -67,7 +71,9 @@ a:hover {
     height: 100%;
     width: 80%;
     padding-top: 20px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 @font-face {
@@ -178,12 +184,19 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-preferred-size: 300px;
     flex-basis: 300px;
     margin: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .projectCellTitle, .description {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     text-align: center;
 }
 
