@@ -262,13 +262,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Hide footer on mobile  since it causes bugs on Safari */
-@media screen and (max-width: 455px) {
-    .footer, .non-safari-hr {
-        display: none;
-    }
-}
-
 /* Adjust Work-Code Layout when screen size is small */
 @media screen and (min-width: 980px) {
     .descriptive-projectCell {
@@ -287,6 +280,32 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
+/* Remove footer from smaller devices */
+/*
+@media screen and (max-width: 980px) {
+    .footer, .non-safari-hr {
+        display: none;
+    }
+}
+*/
+
+/* Remove footer from Safari */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { 
+    @media {
+        .footer, .non-safari-hr {
+        display: none;
+    }
+    }
+}
+@media not all and (min-resolution:.001dpcm) { 
+    @media {
+        .footer, .non-safari-hr {
+        display: none;
+    }
+    }
+}
+
+/* Icon Styles */
 
 .icon-envelope:before {
   content: "\e902";
