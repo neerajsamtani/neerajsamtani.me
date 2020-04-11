@@ -81,15 +81,15 @@ function handleNavClick(event){
         showSubnav("projects");
         select($('.sub-items').children()[0], true);
     }
-    else if (target.hash === "#work-film"){
-        setContent('.work-film', true);
-        showSubnav("work");
-        select($('.sub-items').children()[1], true);
-    }
+//    else if (target.hash === "#work-film"){
+//        setContent('.work-film', true);
+//        showSubnav("work");
+//        select($('.sub-items').children()[1], true);
+//    }
     else if (target.hash === "#work-code"){
         setContent('.work-code', true);
-        showSubnav("work");
-        select($('.sub-items').children()[2], true);
+//        showSubnav("work");
+//        select($('.sub-items').children()[2], true);
     }
     else if (target.hash === "#projects-film"){
         setContent('.projects-film', true);
