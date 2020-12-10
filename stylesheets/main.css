@@ -120,13 +120,13 @@ a {
     text-decoration: none !important; }
 
 p {
-  margin-bottom: 1.5em; }
+  margin-bottom: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
-  margin: 0 0 20px 0; }
+  margin: 0 0 0.5em 0; }
 
 .projects {
     -webkit-box-pack: center;
@@ -197,6 +197,11 @@ h1, h2, h3, h4, h5, h6 {
         -ms-grid-row-align: center;
         align-self: center;
     text-align: center;
+    
+}
+
+.awards {
+    font-size: 90%;
 }
 
 /*
