@@ -69,7 +69,7 @@
                 <a class="nav-link" href="#about-me" onclick="handleNavClick(event)">About Me</a>
               </li>
               <li class="nav-item items">
-                <a class="nav-link projects" href="#projects-code" onclick="handleNavClick(event)">Projects</a>
+                <a class="nav-link projects" href="#projects-film" onclick="handleNavClick(event)">Projects</a>
               </li>
               <li class="nav-item items">
                 <a class="nav-link" href="#work-code" onclick="handleNavClick(event)">Work Experience</a>
@@ -82,11 +82,11 @@
            <div class="projects-subnav">
            <hr class="extra-hr">
             <ul class="nav flex-row justify-content-center">
-              <li class="nav-item sub-items">
-                <a class="nav-link" href="#projects-code" onclick="handleSubnavClick(event)">Code</a>
+                <li class="nav-item sub-items">
+                <a class="nav-link" href="#projects-film" onclick="handleSubnavClick(event)">Film</a>
               </li>
               <li class="nav-item sub-items">
-                <a class="nav-link" href="#projects-film" onclick="handleSubnavClick(event)">Film</a>
+                <a class="nav-link" href="#projects-code" onclick="handleSubnavClick(event)">Code</a>
               </li>
             </ul>
             </div>
@@ -108,86 +108,35 @@
       <div class="main-content">
           <div class="about-me">
               <p>
-                Hey! I'm Neeraj, a Senior at UCLA where I major in Computer Science and double minor in Math and Film. When I'm not swamped in coursework, I enjoy reading, playing basketball, and going to the gym. I've been the Director of Media Relations at Sigma Eta Pi (UCLA's premier entrepreneurship fraternity), the Vice President of FPS Productions, and a member of Upsilon Pi Epsilon, the International Honor Society for the Computing and Information Disciplines.
+                Welcome to my website! I'm an avid coffee drinker, amateur filmmaker, and a new grad software engineer at Stripe. I recently graduated from UCLA where I majored in Computer Science and minored in Film, Television, and Digital Media. I enjoy playing basketball, cooking, and reading (please send me your book reccs!). I've been the Director of Media Relations at SEP (UCLA's premier entrepreneurship organization), the Vice President of FPS Productions, and a member of Upsilon Pi Epsilon, the International Honor Society for the Computing and Information Disciplines.
                 <br><br>
+<!--
                  I'm a polymath and an avid reader - history, science-fiction, and autobiographies are a few genres that accompany my computer science and film books. Apart from learning, I enjoy helping others learn. I've taught a class at UCLA  <a href="https://splashatucla.learningu.org/learn/Splash/Spring_2019/catalog#class_113" style="text-decoration: underline" target="_blank">(<em>M113: How does Bitcoin Work?</em>)</a>, volunteered with ACM to teach Python, spoke at the <a href="http://www.godubai.com/citylife/Press_Release_page.asp?Pr=119532&Sname=Education" style="text-decoration: underline" target="_blank">UAE Public Policy Forum</a> about the Future of Education, and placed second in the Dr. Radhakrishnan Best Pupil-Teacher Award.
                  <br><br>
-                 If you're interested in working with me or just want to chat, you can reach me on my social media provided above. I'd love to hear from you!
+-->
+                 If you're interested in collaborating on a fun project or just want to chat, please reach me on my social media provided above. I'd love to hear from you!
               </p>
           </div>
-           <div class="projects-code">
-            <div class="projects-code-text">
-                <p>
-                    I'm constantly working on projects because I learn by doing. Click on a project below to check it out!
-                </p>    
-            </div>
-            <div class="projects row">
-                <div class="project-container">
-                    <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
-                        <h5 class="projectCellTitle"> codirector </h5>
-                        <a style="display:block" href="https://github.com/neerajsamtani/codirector" target="_blank">
-                            <div class="projectContent">
-                                <img class="projectContentImage" onclick="showDetail(event)" src="/assets/images/codirector.png" alt="codirector">
-                            </div>
-                        </a>
-                        <p class="description">Make and distribute interactive films</p>
-                    </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
-                        <h5 class="projectCellTitle"> Robot Doomsday </h5>
-                        <a style="display:block" href="https://github.com/neerajsamtani/robot_doomsday" target="_blank">
-                            <div class="projectContent">
-                                <img class="projectContentImage" onclick="showDetail(event)" src="/assets/images/robot_doomsday.png" alt="Robot Doomsday">
-                            </div>
-                        </a>
-                        <p class="description">Videogame where you must survive a robot invasion.</p>
-                    </div>
-                   <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
-                        <h5 class="projectCellTitle"> DrugDecider </h5>
-<!--                        <a style="display:block" href="">-->
-                            <div class="projectContent">
-                                <img class="projectContentImage" src="/assets/images/drugdecider.png" alt="Drug Decider">
-                            </div>
-<!--                        </a>-->
-                        <p class="description">Predict a patient's treatment response to antipsychotics.</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
-                        <h5 class="projectCellTitle"> Gee-nomics </h5>
-                        <a style="display:block" href="https://github.com/neerajsamtani/Gee-nomics" target="_blank">
-                            <div class="projectContent">
-                                <img class="projectContentImage" onclick="showDetail(event)" src="/assets/images/Gee-nomics.jpg" alt="Gee-nomics">
-                            </div>
-                        </a>
-                        <p class="description">Process genetic data</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
-                        <h5 class="projectCellTitle"> Zombie Dash </h5>
-                        <a style="display:block" href="https://github.com/neerajsamtani/ZombieDash" target="_blank">
-                            <div class="projectContent">
-                                <img class="projectContentImage"  onclick="showDetail(event)" src="/assets/images/zombie-dash.jpg" alt="Zombie Dash">
-                            </div>
-                        </a>
-                        <p class="description">Videogame about an amateur zombie hunter</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
-                        <h5 class="projectCellTitle"> Books For A Cause </h5>
-                        <a style="display:block" href="https://github.com/neerajsamtani/booksforacause" target="_blank">
-                            <div class="projectContent">
-                                <img class="projectContentImage"  onclick="showDetail(event)" src="/assets/images/books-for-a-cause-2.jpg" alt="Books For A Cause">
-                            </div>
-                        </a>
-                        <p class="description">Online second-hand bookstore in GEMS Modern Academy</p>
-                    </div>
-                </div>
-            </div>
-          </div>
            <div class="projects-film">
+<!--
               <div class="projects-film-text">
                 <p>
                  These are the short films I had the most fun making. Why not click on one to watch right now?
                 </p>
             </div>
+-->
             <div class="projects row">
                 <div class="project-container">
+                    <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
+                        <h5 class="projectCellTitle"> Ozzy's World </h5>
+                        <p class="description awards"><em>Best Screenplay and Best Actor,<br> CEC Shorttakes 2022</em></p>
+                        <a style="display:block" href="https://www.youtube.com/watch?v=J0vZ8LkkiMM" target="_blank">
+                            <div class="projectContent">
+                                <img class="projectContentImage" onclick="showDetail(event)" src="/assets/images/ozzys-world.jpeg" alt="Ozzy's World">
+                            </div>
+                        </a>
+                        <p class="description">Independent, Spring 2022</p>
+                    </div>
                   <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
                         <h5 class="projectCellTitle"> Cube </h5>
                         <p class="description awards"><em>Jury Award Winner, CMF 2020</em></p>
@@ -250,6 +199,73 @@
                 </div>
             </div>
           </div>
+            <div class="projects-code">
+<!--
+            <div class="projects-code-text">
+                <p>
+                    I'm constantly working on projects because I learn by doing. Click on a project below to check it out!
+                </p>    
+            </div>
+-->
+                <div class="projects row">
+                <div class="project-container">
+                    <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
+                        <h5 class="projectCellTitle"> codirector </h5>
+                        <a style="display:block" href="https://github.com/neerajsamtani/codirector" target="_blank">
+                            <div class="projectContent">
+                                <img class="projectContentImage" onclick="showDetail(event)" src="/assets/images/codirector.png" alt="codirector">
+                            </div>
+                        </a>
+                        <p class="description">Make and distribute interactive films</p>
+                    </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
+                        <h5 class="projectCellTitle"> Robot Doomsday </h5>
+                        <a style="display:block" href="https://github.com/neerajsamtani/robot_doomsday" target="_blank">
+                            <div class="projectContent">
+                                <img class="projectContentImage" onclick="showDetail(event)" src="/assets/images/robot_doomsday.png" alt="Robot Doomsday">
+                            </div>
+                        </a>
+                        <p class="description">Videogame where you must survive a robot invasion.</p>
+                    </div>
+<!--
+                   <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
+                        <h5 class="projectCellTitle"> DrugDecider </h5>
+                            <div class="projectContent">
+                                <img class="projectContentImage" src="/assets/images/drugdecider.png" alt="Drug Decider">
+                            </div>
+                        <p class="description">Predict a patient's treatment response to antipsychotics.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
+                        <h5 class="projectCellTitle"> Gee-nomics </h5>
+                        <a style="display:block" href="https://github.com/neerajsamtani/Gee-nomics" target="_blank">
+                            <div class="projectContent">
+                                <img class="projectContentImage" onclick="showDetail(event)" src="/assets/images/Gee-nomics.jpg" alt="Gee-nomics">
+                            </div>
+                        </a>
+                        <p class="description">Process genetic data</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
+                        <h5 class="projectCellTitle"> Zombie Dash </h5>
+                        <a style="display:block" href="https://github.com/neerajsamtani/ZombieDash" target="_blank">
+                            <div class="projectContent">
+                                <img class="projectContentImage"  onclick="showDetail(event)" src="/assets/images/zombie-dash.jpg" alt="Zombie Dash">
+                            </div>
+                        </a>
+                        <p class="description">Videogame about an amateur zombie hunter</p>
+                    </div>
+-->
+                    <div class="col-xs-12 col-sm-6 col-md-4 projectCell">
+                        <h5 class="projectCellTitle"> Books For A Cause </h5>
+                        <a style="display:block" href="https://github.com/neerajsamtani/booksforacause" target="_blank">
+                            <div class="projectContent">
+                                <img class="projectContentImage"  onclick="showDetail(event)" src="/assets/images/books-for-a-cause-2.jpg" alt="Books For A Cause">
+                            </div>
+                        </a>
+                        <p class="description">Online second-hand bookstore in GEMS Modern Academy</p>
+                    </div>
+                </div>
+            </div>
+          </div>
            <div class="work-code">
           <div class="work-code-text">
                <p></p>
@@ -259,15 +275,16 @@
                 
                 <div class="descriptive-projectCell">
                        <div class="left">
-                            <h5 class="projectCellTitle"> Incoming Software Engineer </h5>
+                            <h5 class="projectCellTitle"> Software Engineer </h5>
                             <div class="projectContent">
                                 <img class="projectContentImage descriptive-projectContentImage "  onclick="showDetail(event)" src="/assets/images/stripe.png" alt="Stripe Logo">
                             </div>
-                            <p class="description"> 2022 </p>
+                            <p class="description"> Summer 2022 - Present </p>
                         </div>
                         <div class="right">
                             <div class="long-description">
-                                <p>I'll be working full-time at <em><a href="https://stripe.com/" target="_blank">Stripe</a></em> soon!</p>
+                                <p>I build software full-time at <em><a href="https://stripe.com/" target="_blank">Stripe</a></em> ! When I'm not writing 
+                                    Java or Ruby, I'm probably tracking down which YAML file I need to edit to get things to work.</p>
                             </div>
                         </div>
                     </div>
@@ -309,7 +326,7 @@
             <div class="writing">
           <div class="writing-text">
                 <p>
-                Sometimes my papers turn out better than expected. Here are a few of them. If you don't know where to start, I recommend the one on Quantum Computing and Bitcoin since it was published and listed on SSRN's Top Ten download list for CompSciRN Cyber Attack (Topic) and the Computing Methodology eJournal. I spent six months working on it and even received advice from Martin Roetteler at Microsoft!
+                Sometimes my college/school papers turned out better than expected. Here are a few of them. If you don't know where to start, I recommend the one on Quantum Computing and Bitcoin since it was published and listed on SSRN's Top Ten download list for CompSciRN Cyber Attack (Topic) and the Computing Methodology eJournal. I spent six months working on it and even received advice from Martin Roetteler at Microsoft!
               </p>
             </div>
             <div class="projects row">
@@ -368,12 +385,14 @@
                </div>
           </div>
       </div>
-      <hr class="non-safari-hr">
+<!--      <hr class="non-safari-hr">-->
       
     <!-- Footer -->
+<!--
       <div class="footer">
           <p>Like what you've seen so far? Click <a href="mailto:neeraj.j.samtani@gmail.com" style="text-decoration: underline">here</a> to contact me or download my <a target="_blank" href="./assets/neeraj_samtani_resume.pdf" style="text-decoration: underline">resume</a>.</p>
       </div>
+-->
       
       <!-- Google Analytics and Bootstrap -->
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

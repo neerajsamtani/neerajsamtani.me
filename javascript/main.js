@@ -79,7 +79,7 @@ function handleNavClick(event){
     else if (target.hash === "#projects-code"){
         setContent('.projects-code', true);
         showSubnav("projects");
-        select($('.sub-items').children()[0], true);
+        select($('.sub-items').children()[1], true);
     }
 //    else if (target.hash === "#work-film"){
 //        setContent('.work-film', true);
@@ -94,7 +94,7 @@ function handleNavClick(event){
     else if (target.hash === "#projects-film"){
         setContent('.projects-film', true);
         showSubnav("projects");
-        select($('.sub-items').children()[3], true);
+        select($('.sub-items').children()[0], true);
     }
     else{
         hideSubnavs();
