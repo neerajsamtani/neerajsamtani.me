@@ -538,7 +538,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Syntax highlighting (Rouge) */
 
-.post-content .highlight { background: none; }
 .post-content .highlight .c,
 .post-content .highlight .c1,
 .post-content .highlight .cm,
