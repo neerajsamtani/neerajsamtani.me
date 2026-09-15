@@ -1,0 +1,25 @@
+# The site nav. Add a page here and it appears in the navbar everywhere.
+- id: about
+  title: About Me
+  url: /
+
+- id: projects
+  title: Projects
+  url: /projects/film/
+  subnav:
+    - title: Film
+      url: /projects/film/
+    - title: Code
+      url: /projects/code/
+
+- id: work
+  title: Work Experience
+  url: /work/
+
+- id: writing
+  title: Writing
+  url: /writing/
+
+- id: blog
+  title: Blog
+  url: /blog/

@@ -2,6 +2,7 @@ title: Neeraj Samtani
 description: Neeraj Samtani's Website
 url: https://neerajsamtani.me
 author: Neeraj Samtani
+image: /assets/images/mini.jpg
 
 # Posts live at /blog/my-post-title/
 permalink: /blog/:title/
@@ -25,6 +26,8 @@ defaults:
       type: posts
     values:
       layout: post
+      active_nav: blog
+      body_class: blog
 
 exclude:
   - Gemfile

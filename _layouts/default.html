@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}</title>
+    <title>{% if page.url == '/' %}Neeraj Samtani's Website{% elsif page.title %}{{ page.title }} &middot; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     {% seo title=false %}
 
     <link rel="shortcut icon" href="/assets/images/mini.jpg" type="image/jpeg" />
@@ -47,21 +47,61 @@
         <li><a target="_blank" href="/assets/neeraj_samtani_resume.pdf"><i class="icon icon-profile"></i></a></li>
     </ul>
 
-    <!-- Navbar -->
+    <!-- Navbar (generated from _data/nav.yml) -->
     <nav>
         <ul class="nav flex-row justify-content-center">
-            <li class="nav-item items"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item items"><a class="nav-link selected" href="/blog/">Blog</a></li>
+            {%- for item in site.data.nav %}
+            <li class="nav-item items">
+                <a class="nav-link{% if item.id == page.active_nav %} selected{% endif %}"
+                    href="{{ item.url }}">{{ item.title }}</a>
+            </li>
+            {%- endfor %}
         </ul>
+
+        {%- for item in site.data.nav %}
+        {%- if item.subnav and item.id == page.active_nav %}
+        <div class="subnav">
+            <hr class="extra-hr">
+            <ul class="nav flex-row justify-content-center">
+                {%- for sub in item.subnav %}
+                <li class="nav-item sub-items">
+                    <a class="nav-link{% if sub.url == page.url %} selected{% endif %}"
+                        href="{{ sub.url }}">{{ sub.title }}</a>
+                </li>
+                {%- endfor %}
+            </ul>
+        </div>
+        {%- endif %}
+        {%- endfor %}
         <hr>
     </nav>
 
     <!-- Content -->
     <div class="main-content">
-        <div class="blog">
+        <div class="{{ page.body_class | default: 'blog' }}">
             {{ content }}
         </div>
     </div>
+
+    {%- if page.url == '/' %}
+    <!-- Send links to the old single-page hash URLs to their real pages -->
+    <script>
+        (function () {
+            var moved = {
+                '#about-me': '/',
+                '#projects-film': '/projects/film/',
+                '#projects-code': '/projects/code/',
+                '#work-code': '/work/',
+                '#work-film': '/work/',
+                '#writing': '/writing/'
+            };
+            var target = moved[window.location.hash];
+            if (target && target !== window.location.pathname) {
+                window.location.replace(target);
+            }
+        })();
+    </script>
+    {%- endif %}
 
     <!-- Google Analytics -->
     <script>

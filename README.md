@@ -3,9 +3,12 @@
 The code for my personal website, hosted on GitHub Pages at
 [neerajsamtani.me](https://neerajsamtani.me).
 
-The homepage (`index.html`) is plain static HTML. The blog is built by Jekyll,
-which GitHub Pages runs automatically — there's no build step to run and nothing
-to install.
+Every page is built by Jekyll, which GitHub Pages runs automatically on push —
+there's no build step to run and nothing to install.
+
+Each section of the site has its own URL (`/`, `/projects/film/`, `/work/`,
+`/writing/`, `/blog/`), so pages can be linked to and shared directly. They all
+share one layout, and the navbar is generated from `_data/nav.yml`.
 
 ## Writing a blog post
 
@@ -58,14 +61,48 @@ bundle exec jekyll serve
 
 Then open <http://localhost:4000>.
 
+## Adding a page
+
+1. Create `some-page/index.html` with front matter:
+
+   ```html
+   ---
+   layout: default
+   title: Some Page
+   active_nav: some-page
+   body_class: some-page
+   ---
+   <p>Your content.</p>
+   ```
+
+   `active_nav` decides which navbar item is highlighted; `body_class` is the
+   CSS class put on the content wrapper.
+
+2. Add it to `_data/nav.yml` so it shows up in the navbar:
+
+   ```yaml
+   - id: some-page
+     title: Some Page
+     url: /some-page/
+   ```
+
+   An entry can also have a `subnav:` list, like Projects does. The subnav only
+   appears on pages belonging to that section.
+
 ## Layout
 
-| Path                   | What it is                                     |
-| ---------------------- | ---------------------------------------------- |
-| `index.html`           | Homepage — static HTML, untouched by Jekyll    |
-| `_posts/`              | Blog posts, one Markdown file each             |
-| `blog/index.html`      | The blog index page                            |
-| `_layouts/default.html`| Shared page chrome (header, nav, analytics)    |
-| `_layouts/post.html`   | Wrapper around a single post                   |
-| `stylesheets/main.css` | Site styles, including the blog styles         |
-| `_config.yml`          | Jekyll configuration                           |
+| Path                    | What it is                                    |
+| ----------------------- | --------------------------------------------- |
+| `index.html`            | About Me — the homepage                       |
+| `projects/film/`, `projects/code/` | Projects pages                     |
+| `work/`, `writing/`     | Work Experience and Writing pages             |
+| `blog/index.html`       | The blog index page                           |
+| `_posts/`               | Blog posts, one Markdown file each            |
+| `_data/nav.yml`         | The navbar — one entry per page               |
+| `_layouts/default.html` | Shared page chrome (header, nav, analytics)   |
+| `_layouts/post.html`    | Wrapper around a single post                  |
+| `stylesheets/main.css`  | Site styles                                   |
+| `_config.yml`           | Jekyll configuration                          |
+
+Links to the old single-page URLs (`/#writing`, `/#projects-code`, and so on)
+redirect to the corresponding page.
