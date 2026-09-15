@@ -1,0 +1,27 @@
+---
+layout: default
+title: Blog
+active_nav: blog
+body_class: blog
+---
+<h1 class="post-title">Blog</h1>
+<p class="blog-intro">
+    Notes on software, film, and whatever else I've been thinking about.
+    <a href="{{ site.feed.path | default: '/feed.xml' | relative_url }}">Subscribe via RSS</a>.
+</p>
+
+<ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-list-item">
+        <h5 class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+        <p class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </p>
+        <p class="post-list-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+{% if site.posts.size == 0 %}
+<p>No posts yet. Check back soon!</p>
+{% endif %}
