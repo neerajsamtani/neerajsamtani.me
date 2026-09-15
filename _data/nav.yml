@@ -16,9 +16,11 @@
   title: Work Experience
   url: /work/
 
-- id: writing
-  title: Writing
-  url: /writing/
+# Temporarily hidden from the navbar pending a redesign.
+# The page itself still builds and is reachable at /writing/.
+# - id: writing
+#   title: Writing
+#   url: /writing/
 
 - id: blog
   title: Blog
