@@ -1,0 +1,33 @@
+title: Neeraj Samtani
+description: Neeraj Samtani's Website
+url: https://neerajsamtani.me
+author: Neeraj Samtani
+
+# Posts live at /blog/my-post-title/
+permalink: /blog/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: /blog/feed.xml
+
+# So a post only needs a title and a date in its front matter.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

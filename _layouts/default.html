@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}</title>
+    {% seo title=false %}
+
+    <link rel="shortcut icon" href="/assets/images/mini.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+
+    {% feed_meta %}
+</head>
+
+<body>
+
+    <!-- Image and Name -->
+    <a href="/" class="outer">
+        <img id="profile-image" class="profile-image" src="/assets/images/profile.png" alt="Neeraj Samtani">
+    </a>
+    <div class="outer">
+        <h2><a href="/">Neeraj Samtani</a></h2>
+    </div>
+
+    <!-- Social Media Links -->
+    <ul class="icons nav flex-row justify-content-center">
+        <li><a target="_blank" href="https://twitter.com/neerajsamtani"><i class="icon icon-twitter"></i></a></li>
+        <li><a target="_blank" href="https://linkedin.com/in/neerajsamtani/"><i class="icon icon-linkedin"></i></a></li>
+        <li><a target="_blank" href="mailto:neeraj.j.samtani@gmail.com"><i class="icon icon-contact"></i></a></li>
+        <li><a target="_blank" href="https://github.com/neerajsamtani"><i class="icon icon-github"></i></a></li>
+        <li><a target="_blank" href="https://www.youtube.com/NeerajSamtani"><i class="icon icon-youtube"></i></a></li>
+        <li><a target="_blank" href="/assets/neeraj_samtani_resume.pdf"><i class="icon icon-profile"></i></a></li>
+    </ul>
+
+    <!-- Navbar -->
+    <nav>
+        <ul class="nav flex-row justify-content-center">
+            <li class="nav-item items"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item items"><a class="nav-link selected" href="/blog/">Blog</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+    <!-- Content -->
+    <div class="main-content">
+        <div class="blog">
+            {{ content }}
+        </div>
+    </div>
+
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-85388320-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
